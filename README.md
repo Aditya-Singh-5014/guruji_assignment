@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Multi-Step Form with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a responsive multi-step form built using React.js. It guides users through a three-step process for collecting personal and address information, with a final step for confirmation. The form includes features such as client-side validation, error handling, navigation controls, and data persistence using local storage. The application is deployed on GitHub Pages for easy access.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Multi-Step Form**: The form is divided into three steps:
+  - **Step 1**: Personal Information (Name, Email, Phone)
+  - **Step 2**: Address Information (Address Line 1, Address Line 2, City, State, Zip Code)
+  - **Step 3**: Confirmation (Review all entered data)
+- **Navigation and Controls**:
+  - Tabbed navigation to switch between steps.
+  - Back button disabled on the first step.
+  - Submit button replaces the Next button on the last step.
+- **Client-Side Validation**:
+  - Ensures all fields are filled before allowing navigation to the next step.
+  - Displays appropriate error messages for empty or invalid fields.
+  - Highlights fields with errors.
+- **State Management**:
+  - Uses React state with hooks (`useState`, `useEffect`) to manage form data.
+  - State updates reflect user inputs and form navigation.
+- **Local Storage**:
+  - Persists entered data to local storage when navigating between steps.
+  - Retrieves and pre-fills form fields if the user revisits the form.
+- **Responsive Design**:
+  - Ensures the form is responsive and works well on desktop, tablet, and mobile screens.
+  - Uses CSS animations and transitions for a smooth user experience.
+- **Unit Tests**:
+  - Includes unit tests for critical components and validation functions using the React Testing Library.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- React Router
+- React Icons
+- CSS for styling and animations
+- Local Storage for data persistence
+- React Testing Library for unit testing
+- GitHub Pages for deployment
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+src/
+|-- components/
+| |-- Navigation.jsx
+| |-- Step1.jsx
+| |-- Step2.jsx
+| |-- Step3.jsx
+| |-- tests/
+| |-- MultiStepForm.test.jsx
+| |-- Step1.test.jsx
+| |-- Step2.test.jsx
+| |-- Step3.test.jsx
+|-- pages/
+| |-- MultiStepForm.jsx
+|-- styles/
+| |-- MultiStepForm.css
+|-- utils/
+| |-- validation.js
+|-- localStorage.js
+|-- App.js
+|-- index.js
+|-- index.css
+|-- reportWebVitals.js
+|-- setupTests.js
 
-### `npm run build`
+## How to Use
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Clone this repository to your local machine using `git clone https://github.com/Aditya-Singh-5014/guruji_assignment.git`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Navigate to the Project Directory**:
 
-### `npm run eject`
+   - Change to the project directory: `cd guruji_assignment`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Install Dependencies**:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - Install the required dependencies using `npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Run the Application**:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   - Start the development server using `npm start`
+   - Open your browser and navigate to `http://localhost:3000/guruji_assignment` to view the application.
 
-## Learn More
+5. **Build and Deploy**:
+   - Build the project for production using `npm run build`
+   - Deploy the application to GitHub Pages using `npm run deploy`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This application is deployed on GitHub Pages. You can access it [here](https://Aditya-Singh-5014.github.io/guruji_assignment).
 
-### Code Splitting
+## Contributions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure that your code follows the project's coding standards and includes appropriate tests.

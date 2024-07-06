@@ -4,7 +4,7 @@ import MultiStepForm from "./pages/MultiStepForm";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/guruji_assignment">
       <Routes>
         <Route path="/" element={<MultiStepForm />} />
       </Routes>
